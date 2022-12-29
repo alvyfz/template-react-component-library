@@ -1,27 +1,58 @@
 {
-  "name": "template-react-component-library",
-  "version": "0.0.1",
+  "name": "@alvyfz/template-react-component-library",
+  "version": "0.0.2",
   "description": "A simple template for a custom React component library",
   "scripts": {
-    "rollup": "rollup -c"
+    "rollup": "rollup -c",
+    "test": "jest",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "author": "Alvy Fauzi",
   "license": "ISC",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^21.0.1",
-    "@rollup/plugin-node-resolve": "^13.0.6",
-    "@rollup/plugin-typescript": "^8.3.3",
-    "@types/react": "^17.0.34",
-    "react": "^17.0.2",
-    "rollup": "^2.60.0",
-    "rollup-plugin-dts": "^4.0.1",
+    "@babel/core": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "@rollup/plugin-commonjs": "^24.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^10.0.1",
+    "@storybook/addon-actions": "^6.5.15",
+    "@storybook/addon-essentials": "^6.5.15",
+    "@storybook/addon-interactions": "^6.5.15",
+    "@storybook/addon-links": "^6.5.15",
+    "@storybook/builder-webpack5": "^6.5.15",
+    "@storybook/manager-webpack5": "^6.5.15",
+    "@storybook/react": "^6.5.15",
+    "@storybook/testing-library": "^0.0.13",
+    "@testing-library/react": "^13.4.0",
+    "@types/jest": "^29.2.4",
+    "@types/react": "^18.0.26",
+    "babel-jest": "^29.3.1",
+    "babel-loader": "^8.3.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.3.1",
+    "jest-environment-jsdom": "^29.3.1",
+    "react": "^18.2.0",
+    "rollup": "^3.9.0",
+    "rollup-plugin-dts": "^5.1.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2",
     "tslib": "^2.4.1",
-    "typescript": "^4.4.4"
+    "typescript": "^4.9.4"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/alvyfz"
+  },
+  "dependencies": {
+    "react-dom": "^18.2.0"
+  }
 }
